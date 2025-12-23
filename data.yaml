@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['driver car f', 'emergency car', 'small cars']
+
+roboflow:
+  workspace: traffic-gxlzc
+  project: final-da4nu
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/traffic-gxlzc/final-da4nu/dataset/3

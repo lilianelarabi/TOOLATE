@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Road System - Operations Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="content-wrapper">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <div class="header-title-wrapper">
+                        <h1>Intelligent Road System</h1>
+                        <svg class="sparkles-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3v3m0 12v3m9-9h-3M6 12H3m15.364-6.364l-2.121 2.121M8.757 15.243l-2.121 2.121m12.728 0l-2.121-2.121M8.757 8.757L6.636 6.636"/>
+                        </svg>
+                    </div>
+                    <p class="header-subtitle">Real-Time Traffic Operations Dashboard</p>
+                </div>
+                <div class="header-right">
+                    <div class="status-badge">
+                        <span>System Active</span>
+                    </div>
+                    <div class="time-badge">
+                        <span id="current-time">--:--:--</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- AI Command Module -->
+            <section class="ai-command-module">
+                <div class="ai-content">
+                    <!-- Optimal Route Display -->
+                    <div class="optimal-route-display">
+                        <div class="optimal-lane-number">
+                            <span class="lane-num" id="optimal-lane">Lane 2</span>
+                            <div class="active-badge">ACTIVE NOW</div>
+                        </div>
+                        <div class="optimal-footer">
+                            <span id="optimal-footer-text">Best flow efficiency</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom metrics row -->
+                <div class="metrics-row">
+                    <div class="metric-card">
+                        <p class="metric-label">Vehicles</p>
+                        <p class="metric-value" id="total-vehicles">231</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommended Route -->
+            <section class="recommended-section">
+                <div class="optimal-card-header">
+                    <div class="optimal-title-row">
+                        <h2 id="recommended-lane-title">Lane 2</h2>
+                    </div>
+                </div>
+
+                <div class="optimal-card-right">
+                    <p class="traffic-status-label">Traffic Status</p>
+                    <p class="traffic-status-value" id="traffic-status">Moderate Flow</p>
+                </div>
+
+                <div class="optimal-stats">
+                    <div class="optimal-stat-card">
+                        <p class="optimal-stat-label">Active Vehicles</p>
+                        <p class="optimal-stat-value" id="active-vehicles">78</p>
+                        <p class="optimal-stat-detail">of 150 capacity</p>
+                    </div>
+                </div>
+
+                <div class="optimal-progress">
+                    <div class="progress-labels">
+                        <span class="progress-label-left">Lane Capacity</span>
+                        <span class="progress-label-right" id="lane-capacity-text">52%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="lane-capacity-bar" style="width: 52%"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Stats -->
+            <footer class="footer-stats">
+                <div class="footer-stat-card">
+                    <p class="footer-stat-label">Total Vehicles</p>
+                    <p class="footer-stat-value" id="footer-total-vehicles">251</p>
+                </div>
+                <div class="footer-stat-card">
+                    <p class="footer-stat-label">Emergency Ready</p>
+                    <p class="footer-stat-value emergency-lane" id="emergency-lane">Lane 3</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
